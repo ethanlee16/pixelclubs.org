@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="PIxEL Clubs is a national organization of after-school high school clubs to teach students to pursue computer science through web tools, design, and business.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/colors.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="pillars">
+            <div class="pillar-row" style="background-color: #FF7E79">
+                <h1 class="tagline">For artists and designers.</h1>
+            </div>
+            <div class="pillar-row" style="background-color: #00F3FF">
+                <h1 class="tagline">For hackers and coders.</h1>
+            </div>
+            <div class="pillar-row" style="background-color: #75CBFE">
+                <h1 class="tagline">For entrepreneurs and enterprisers.</h1>
+            </div>
+            <div class="pillar-row" style="background-color: #FE89D7">
+                <h1 class="tagline">For experts and beginners.</h1>
+            </div>
+            <div class="pillar-row" style="background-color: #ECFF45">
+                <h1 class="tagline">For you.</h1>
+            </div>
+        </div>
+        <div class="main" style="">
+            <div id="header">
+                <img src="img/pxl-temp.png" width="400">
+                <h1 id="explain"></h1>
+                <h2 id="cta"></h2>
+            </div>
+            <div class="expand-row" style="background-color: #FF7E79; height: 0px;">
+                <h1 class="tagline">For artists and designers.</h1>
+                <p>Case loves you. Instead of Albert Lee.</p>
+            </div>
+        </div>
+        <div class="bg"></div>
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.typetype.min.js"></script>
+        <script>
+        /** blinkingCursor by Nathan Allen **/
+        function blinkingCursor(elem){
+            var elem = elem || document.querySelector('#blinking-cursor');
+            setInterval(function(){
+                elem.style.visibility = 'hidden';
+                setTimeout(function(){
+                    elem.style.visibility = '';
+                }, 600);
+            }, 1200);
+        }
+
+        setTimeout(function () {
+            $("h1#explain").typetype(
+                "programmers + innovators * entrepreneurs + leaders.", {
+                    t: 30,
+                    e: 0,
+                    keypress: function () {
+                        $("span#blinking-cursor").remove();
+                        $("h1#explain").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+                    },
+                    callback: function () {
+                        blinkingCursor(document.querySelector("span#blinking-cursor"));
+                        $("span#blinking-cursor").delay(4800).remove();
+                        $("h2#cta").append("<span id=\"blinking-cursor\">|</span>");
+                    }
+                });
+            $("h2#cta").delay(5000).typetype("Become a Charter Member today.", {
+                t: 60,
+                e: 0,
+                keypress: function () {
+                    $("span#blinking-cursor").remove();
+                    $("h2#cta").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+                    blinkingCursor(document.querySelector("span#blinking-cursor"));
+                },
+                callback: function () {
+                    blinkingCursor(document.querySelector("span#blinking-cursor"));
+                }
+            });
+        }, 3000);
+        
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

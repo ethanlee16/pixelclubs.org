@@ -8,14 +8,14 @@ $(document).ready(function () {
      * Occurs on load and every resize event.
     **/ 
     function reset() {
-        $("#pillars").css("height", $("body").css("height"));
+        $("#intro-row-container").css("height", $("body").css("height"));
         $("#header").css("height", (document.documentElement.clientHeight * 0.8) + "px");
     }
     reset();
     $(window).resize(function () {reset(); });
     
     // Swoop up!
-    $(".pillar-row").each(function (index) {
+    $(".intro-row").each(function (index) {
         var that = this;
         setTimeout(function () {
             $(that).animate({
@@ -30,7 +30,7 @@ $(document).ready(function () {
     
     // Aaaand collapse!
     setTimeout(function () {
-        $(".pillar-row").each(function (index) {
+        $(".intro-row").each(function (index) {
             var that = this;
             $(that).animate({
                 marginTop: window.innerHeight + ((index + 2) * 10) + 'px'
@@ -43,7 +43,7 @@ $(document).ready(function () {
             }, 900);
         });
         setTimeout(function () {
-            $("#pillars").hide();
+            $("#intro-row-container").hide();
         }, 600);
     }, 2500);
     

@@ -33,26 +33,26 @@ function blinkingCursor (elem) {
 }
 
 setTimeout(function () {
-    $("h1#explain").typetype(
+    $("h1#acronym").typetype(
         "programmers + innovators * entrepreneurs + leaders.", {
             t: 30,
             e: 0,
             keypress: function () {
                 $("span#blinking-cursor").remove();
-                $("h1#explain").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+                $("h1#acronym").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
             },
             callback: function () {
                 blinkingCursor(document.querySelector("span#blinking-cursor"));
                 $("span#blinking-cursor").delay(4800).remove();
-                $("h2#cta").append("<span id=\"blinking-cursor\">|</span>");
+                $("h2#description").append("<span id=\"blinking-cursor\">|</span>");
             }
         });
-    $("h2#cta").delay(5000).typetype("Become a Charter Member today.", {
+    $("h2#description").delay(5000).typetype("Become a Charter Member today.", {
         t: 60,
         e: 0,
         keypress: function () {
             $("span#blinking-cursor").remove();
-            $("h2#cta").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+            $("h2#description").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
             blinkingCursor(document.querySelector("span#blinking-cursor"));
         },
         callback: function () {

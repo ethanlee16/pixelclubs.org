@@ -4,13 +4,13 @@
 # TEAM
 
     Ethan Lee - Founder - @thatethanlee
-    
+    T. "Timothy" Gu - Founding Member, Website Tweaker, etc. - @TimothyGu
 
 # THANKS
 
-    <name>
+    Wanna Be One? - https://github.com/ethanlee16/pixelclubs.org/pulls
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr, Bootstrap
+    Normalize.css, jQuery (with TypeType plugins), Modernizr, Bootstrap

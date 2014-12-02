@@ -21,15 +21,16 @@
     }
 }());
 
-/** blinkingCursor by Nathan Allen **/
-function blinkingCursor (elem) {
+/** blinkingCursor by Nathan Allen with modifications by Timothy Gu **/
+function blinkingCursor (elem, speed) {
+    var speed = speed || 1200;
     var elem = elem || document.querySelector('#blinking-cursor');
     setInterval(function(){
         elem.style.visibility = 'hidden';
         setTimeout(function(){
             elem.style.visibility = '';
-        }, 600);
-    }, 1200);
+        }, speed);
+    }, speed / 2);
 }
 
 setTimeout(function () {
@@ -39,15 +40,15 @@ setTimeout(function () {
             e: 0,
             keypress: function () {
                 $("span#blinking-cursor").remove();
-                $("h1#acronym").delay(1000).append("<span id=\"blinking-cursor\">&#9608;</span>");
+                $("h1#acronym").delay(200).append("<span id=\"blinking-cursor\">&#9608;</span>");
             },
             callback: function () {
-                blinkingCursor(document.querySelector("span#blinking-cursor"));
-                $("span#blinking-cursor").delay(2300).remove();
-                $("h2#description").append("<span id=\"blinking-cursor\">&#9608;</span>");
+                blinkingCursor(document.querySelector("span#blinking-cursor"), 600);
+                $("span#blinking-cursor").delay(2800).remove();
+                $("h2#description").append("<span id=\"blinking-cursor\">|</span>");
             }
         });
-    $("h2#description").delay(2500).typetype("Become a Charter Member today.", {
+    $("h2#description").delay(3000).typetype("Become a Charter Member today.", {
         t: 60,
         e: 0,
         keypress: function () {

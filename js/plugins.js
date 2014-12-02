@@ -51,18 +51,17 @@ setTimeout(function () {
                     $("h2#description")
                         .append("<span id=\"blinking-cursor\">|</span>");
                 }, 4000);
-            }
-        });
-    $("h2#description").delay(4200).typetype("Become a Charter Member today.", {
-        t: 60,
-        e: 0,
-        keypress: function () {
-            $("span#blinking-cursor").remove();
-            $("h2#description").delay(4700).append("<span id=\"blinking-cursor\">|</span>");
-            blinkingCursor(document.querySelector("span#blinking-cursor"));
-        },
-        callback: function () {
-            blinkingCursor(document.querySelector("span#blinking-cursor"));
-        }
-    });
-}, 3000);
+    }   }   );
+    $("h2#description").delay(4200)
+        .typetype("Become a Charter Member today.", {
+            t: 60,
+            e: 0,
+            keypress: function () {
+                $("span#blinking-cursor").remove();
+                $("h2#description").delay(4700)
+                    .append("<span id=\"blinking-cursor\">|</span>");
+                blinkingCursor(document.querySelector("span#blinking-cursor"));
+            },
+            callback: function () {
+                blinkingCursor(document.querySelector("span#blinking-cursor"));
+}   }   );  }, 3000);

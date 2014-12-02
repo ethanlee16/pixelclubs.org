@@ -53,7 +53,7 @@ setTimeout(function () {
         e: 0,
         keypress: function () {
             $("span#blinking-cursor").remove();
-            $("h2#description").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+            $("h2#description").delay(1000).append("<span id=\"blinking-cursor\">&#9608;</span>");
             blinkingCursor(document.querySelector("span#blinking-cursor"));
         },
         callback: function () {

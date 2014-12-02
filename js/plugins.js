@@ -51,7 +51,9 @@ setTimeout(function () {
                     $("h2#description")
                         .append("<span id=\"blinking-cursor\">|</span>");
                 }, 4000);
-    }   }   );
+            }
+        }
+    );
     $("h2#description").delay(4200)
         .typetype("Become a Charter Member today.", {
             t: 60,
@@ -64,4 +66,7 @@ setTimeout(function () {
             },
             callback: function () {
                 blinkingCursor(document.querySelector("span#blinking-cursor"));
-}   }   );  }, 3000);
+            }
+        }
+    );
+}, 3000);

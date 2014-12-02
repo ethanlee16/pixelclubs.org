@@ -23,14 +23,14 @@
 
 /** blinkingCursor by Nathan Allen with modifications by Timothy Gu **/
 function blinkingCursor (elem, speed) {
-    var speed = speed || 1200;
+    var speed = speed || 600;
     var elem = elem || document.querySelector('#blinking-cursor');
     setInterval(function(){
         elem.style.visibility = 'hidden';
         setTimeout(function(){
             elem.style.visibility = '';
         }, speed);
-    }, speed / 2);
+    }, speed * 2);
 }
 
 setTimeout(function () {
@@ -43,7 +43,7 @@ setTimeout(function () {
                 $("h1#acronym").delay(200).append("<span id=\"blinking-cursor\">&#9608;</span>");
             },
             callback: function () {
-                blinkingCursor(document.querySelector("span#blinking-cursor"), 600);
+                blinkingCursor(document.querySelector("span#blinking-cursor"), 300);
                 $("span#blinking-cursor").delay(2800).remove();
                 $("h2#description").append("<span id=\"blinking-cursor\">|</span>");
             }

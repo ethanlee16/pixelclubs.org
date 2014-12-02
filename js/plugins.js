@@ -39,15 +39,15 @@ setTimeout(function () {
             e: 0,
             keypress: function () {
                 $("span#blinking-cursor").remove();
-                $("h1#acronym").delay(1000).append("<span id=\"blinking-cursor\">|</span>");
+                $("h1#acronym").delay(1000).append("<span id=\"blinking-cursor\">&#9608;</span>");
             },
             callback: function () {
                 blinkingCursor(document.querySelector("span#blinking-cursor"));
-                $("span#blinking-cursor").delay(4800).remove();
-                $("h2#description").append("<span id=\"blinking-cursor\">|</span>");
+                $("span#blinking-cursor").delay(2300).remove();
+                $("h2#description").append("<span id=\"blinking-cursor\">&#9608;</span>");
             }
         });
-    $("h2#description").delay(5000).typetype("Become a Charter Member today.", {
+    $("h2#description").delay(2500).typetype("Become a Charter Member today.", {
         t: 60,
         e: 0,
         keypress: function () {

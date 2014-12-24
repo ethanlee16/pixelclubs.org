@@ -100,6 +100,26 @@ body {
     width: 100%;
 }
 
+/** BADASS FONTS BY theleagueofmoveabletype.com **/
+@font-face {
+    font-family: "League Spartan";
+    font-weight: bold;
+    src: url("/fonts/leaguespartan-bold.ttf");
+}
+
+@font-face {
+    font-family: "Fanwood";
+    font-style: normal;
+    src: url("/fonts/fanwood-webfont.ttf");
+}
+
+@font-face {
+    font-family: "Fanwood";
+    font-style: italic;
+    src: url("/fonts/fanwood_italic-webfont.ttf");
+}
+    
+
 /* PIxEL brand coloring */
 
 .red {
@@ -150,11 +170,33 @@ body {
     text-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
 }
 
+.expand-row {
+    opacity: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0px;
+    background-color: #F0F0F0;
+    padding-top: 30px;
+}
+
+.expand-row .col-md-8 {
+    padding-top: 5%;
+    padding-left: 20px;
+}
+
 .expand-row h1 {
-    font-size: 96pt;
-    font-weight: 600;
+    font-family: "League Spartan", "Futura", "Tw Cen MT", sans-serif;
+    font-size: 72pt;
+    font-weight: bold;
     text-align: left;
     text-shadow: 1px 4px 6px #f0f0f0, 0 0 0 #000, 1px 4px 6px #f0f0f0;
+}
+
+.expand-row p {
+    font-size: 16pt;
+    font-style: italic;
+    font-family: "Fanwood", italic;
 }
 
 .main {
@@ -213,10 +255,15 @@ body {
 }
 
 .expand-row {
-    height: 0px;
-    width: 100%;
-    background-color: #F0F0F0;
+
 }
+
+.parallax {
+    width: 100%;
+    max-height: 10%;
+    overflow: hidden;
+}
+
 
 /* ==========================================================================
    Helper classes
@@ -407,3 +454,4 @@ xxx
         page-break-after: avoid;
     }
 }
+

@@ -14,6 +14,11 @@ $(document).ready(function () {
     reset();
     $(window).resize(function () {reset(); });
     
+    /** 
+     * Implement random background changer.
+     *
+     */
+    
     // Swoop up!
     $(".intro-row").each(function (index) {
         var that = this;
@@ -50,8 +55,20 @@ $(document).ready(function () {
     // Show that beautiful background!
     setTimeout(function () {
         $(".bg").fadeIn(1000);
-        $(".expand-row").delay(4000).animate({
-            height: (window.innerHeight * 0.6) + 'px'
+        $(".expand-row").delay(2000).animate({
+            "height": (window.innerHeight * 0.6) + 'px'
         }, 300);
+      /*  $(".expand-row h1").delay(2000).animate({
+            "opacity": 1
+        }, 300); */
     }, 3000);
+});
+
+/** TRIGGERS **/
+$(window).on('scroll', function () {
+    if (window.pageYOffset >= $("#intro-row-container").innerHeight() / 2) {
+        $(".expand-row").animate({
+            "opacity": 1
+        }, 500);
+    }
 });
